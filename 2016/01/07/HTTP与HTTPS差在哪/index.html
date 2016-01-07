@@ -1,0 +1,368 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>HTTP与HTTP差在哪 | matthew</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="matthew">
+    
+
+    
+    <meta name="description" content="HTTP协议是我们最常见的应用层协议，就连不搞计算机的例如我朋友小W，都能说出来HTTP://www.taobao.com。。虽然他可能不知道HTTP是个啥但是一定能背下来。HTTPS比HTTP多了个S，S是什么，简单说就是Security就是比HTTP安全呗，但是作为一个程序员来讲你不能这么肤浅，得搞清楚一下，所以S不是Security而是SSL（Security Socket Layer）全称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP与HTTP差在哪">
+<meta property="og:url" content="http://matthew46412.github.io/2016/01/07/HTTP与HTTPS差在哪/index.html">
+<meta property="og:site_name" content="matthew">
+<meta property="og:description" content="HTTP协议是我们最常见的应用层协议，就连不搞计算机的例如我朋友小W，都能说出来HTTP://www.taobao.com。。虽然他可能不知道HTTP是个啥但是一定能背下来。HTTPS比HTTP多了个S，S是什么，简单说就是Security就是比HTTP安全呗，但是作为一个程序员来讲你不能这么肤浅，得搞清楚一下，所以S不是Security而是SSL（Security Socket Layer）全称">
+<meta property="og:updated_time" content="2016-01-07T09:59:57.351Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP与HTTP差在哪">
+<meta name="twitter:description" content="HTTP协议是我们最常见的应用层协议，就连不搞计算机的例如我朋友小W，都能说出来HTTP://www.taobao.com。。虽然他可能不知道HTTP是个啥但是一定能背下来。HTTPS比HTTP多了个S，S是什么，简单说就是Security就是比HTTP安全呗，但是作为一个程序员来讲你不能这么肤浅，得搞清楚一下，所以S不是Security而是SSL（Security Socket Layer）全称">
+
+    
+    
+    <link rel="icon" href="/img/jacman.jpg">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="matthew">matthew</a></h1>
+				<h2 class="blog-motto">业务驱动技术</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="https://www.baidu.com/" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/07/HTTP与HTTPS差在哪/" title="HTTP与HTTP差在哪" itemprop="url">HTTP与HTTP差在哪</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="matthew" target="_blank" itemprop="author">matthew</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-07T06:14:47.000Z" itemprop="datePublished"> 發表於 2016-01-07</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			
+		
+		</div>
+		
+		<p>HTTP协议是我们最常见的应用层协议，就连不搞计算机的例如我朋友小W，都能说出来HTTP://www.taobao.com。。虽然他可能不知道HTTP是个啥但是一定能背下来。<br>HTTPS比HTTP多了个S，S是什么，简单说就是Security就是比HTTP安全呗，但是作为一个程序员来讲你不能这么肤浅，得搞清楚一下，所以S不是Security而是SSL（Security Socket Layer）全称是加密套接字协议层，SSL也属于是应用层协议，但是他工作的地方是应用层与传输层之间，也就是HTTP协议与TCP协议之间。<br>目前越来越多的网站上了HTTPS，好在安全，好在好看，别小瞧这好看，你若不上HTTPS有的浏览器就直接标注你为不安全网站，这个严重了，你虽然知道自己人畜无害的但用户一看见那红色的叉叉就不放心了，当然作为一个程序员来讲这么说又显得肤浅了，实质上我们通常传输一些重要信息都会进行加密比如MD5编码，来防止用户敏感信息这类的被人拦截获取了，但是互联网所传输的敏感信息远不只是这点，例如搜索内容，HTTP是全裸式的明文请求，域名、路径和参数都被中间人们看得一清二楚，另外HTTP还有篡改风险和冒充风险，所以我们需要HTTPS，现在你可能会有两个疑问(没有我也要说，呵呵。。)，<br>1，HTTPS这么好为什么不都上HTTPS。2，HTTPS，如何做到的这么安全</p>
+<p><1>：HTTPS好在安全，但是安全有安全的代价，那就是速度会降低，HTTPS会让页面加载时间增加了50%，增加10%到20%的耗电，此外，HTTPS还会影响缓存，增加数据开销和功耗，已有安全措施也会受到影响。</1></p>
+<p><2>：HTTPS所做的基本是两部，首先验证证书，然后非对称加密。<br>首先发起请求，传送证书<br>采用HTTPS协议的服务器必须要有一套数字证书，可以自己制作，也可以向组织申请。区别就是自己颁发的证书需要客户端验证通过，才可以继续访问，而使用受信任的公司申请的证书则不会弹出提示页面，证书里包含了很多信息，如证书的颁发机构，过期时间等等。<br>然后客户端解析证书<br>这部分工作是有客户端的TLS来完成的，首先会验证公钥是否有效，比如颁发机构，过期时间等等，如果发现异常，则会弹出一个警告框，提示证书存在问题。如果证书没有问题，那么就生成一个随即值。然后用证书对该随机值进行加密。就好像上面说的，把随机值用锁头锁起来，这样除非有钥匙，不然看不到被锁住的内容。</2></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://matthew46412.github.io/2016/01/07/HTTP与HTTPS差在哪/" data-title="HTTP与HTTP差在哪 | matthew" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+  <p class="asidetitle">友情鏈接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.ted.com/" target="_blank" title="">TED</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.shiyanlou.com/" target="_blank" title="实验楼">实验楼</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> coding... <br/>
+			keep your heart</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="matthew">matthew</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
