@@ -4,22 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>matthew</title>
+    <title>nginx 配置说明 | matthew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="matthew">
     
 
     
-    <meta name="description" content="有事没事多写写">
-<meta property="og:type" content="website">
-<meta property="og:title" content="matthew">
-<meta property="og:url" content="http://matthew46412.github.io/index.html">
+    <meta name="description" content="开始学习服务器配置与部署等方面的知识，租了个阿里云的服务器用来研究，准备自己搭建一个环境出来，首先从nginx下手，使用ubuntu系统，APT-GET 安装NGINX，以下是对配置的说明
+#运行用户user www-data;    
+#启动进程,通常设置成和cpu的数量相等worker_processes  1;
+#全局错误日志及PID文件error_log  /var/log/nginx/e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx 配置说明">
+<meta property="og:url" content="http://matthew46412.github.io/2016/01/13/nginx配置说明/index.html">
 <meta property="og:site_name" content="matthew">
-<meta property="og:description" content="有事没事多写写">
+<meta property="og:description" content="开始学习服务器配置与部署等方面的知识，租了个阿里云的服务器用来研究，准备自己搭建一个环境出来，首先从nginx下手，使用ubuntu系统，APT-GET 安装NGINX，以下是对配置的说明
+#运行用户user www-data;    
+#启动进程,通常设置成和cpu的数量相等worker_processes  1;
+#全局错误日志及PID文件error_log  /var/log/nginx/e">
+<meta property="og:updated_time" content="2016-01-13T03:08:43.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="matthew">
-<meta name="twitter:description" content="有事没事多写写">
+<meta name="twitter:title" content="nginx 配置说明">
+<meta name="twitter:description" content="开始学习服务器配置与部署等方面的知识，租了个阿里云的服务器用来研究，准备自己搭建一个环境出来，首先从nginx下手，使用ubuntu系统，APT-GET 安装NGINX，以下是对配置的说明
+#运行用户user www-data;    
+#启动进程,通常设置成和cpu的数量相等worker_processes  1;
+#全局错误日志及PID文件error_log  /var/log/nginx/e">
 
     
     
@@ -66,12 +76,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/01/13/nginx配置说明/" title="nginx 配置说明" itemprop="url">nginx 配置说明</a>
@@ -85,9 +93,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>开始学习服务器配置与部署等方面的知识，租了个阿里云的服务器用来研究，准备自己搭建一个环境出来，首先从nginx下手，<br>使用ubuntu系统，APT-GET 安装NGINX，以下是对配置的说明</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			
+		
+		</div>
+		
+		<p>开始学习服务器配置与部署等方面的知识，租了个阿里云的服务器用来研究，准备自己搭建一个环境出来，首先从nginx下手，<br>使用ubuntu系统，APT-GET 安装NGINX，以下是对配置的说明</p>
 <p>#运行用户<br>user www-data;    </p>
 <p>#启动进程,通常设置成和cpu的数量相等<br>worker_processes  1;</p>
 <p>#全局错误日志及PID文件<br>error_log  /var/log/nginx/error.log;<br>pid        /var/run/nginx.pid;</p>
@@ -183,14 +198,9 @@ location ~ /\.ht {
 
  }
 </code></pre><p>}</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -198,76 +208,43 @@ location ~ /\.ht {
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://matthew46412.github.io/2016/01/13/nginx配置说明/" data-title="nginx 配置说明 | matthew" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/07/HTTP与HTTPS差在哪/" title="HTTP与HTTPS差在哪" itemprop="url">HTTP与HTTPS差在哪</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="matthew" target="_blank" itemprop="author">matthew</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-07T06:14:47.000Z" itemprop="datePublished"> 發表於 2016-01-07</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>HTTP协议是我们最常见的应用层协议，就连不搞计算机的例如我朋友小W，都能说出来HTTP://www.taobao.com。。虽然他可能不知道HTTP是个啥但是一定能背下来。<br>HTTPS比HTTP多了个S，S是什么，简单说就是Security就是比HTTP安全呗，但是作为一个程序员来讲你不能这么肤浅，得搞清楚一下，所以S不是Security而是SSL（Security Socket Layer）全称是加密套接字协议层，SSL也属于是应用层协议，但是他工作的地方是应用层与传输层之间，也就是HTTP协议与TCP协议之间。<br>目前越来越多的网站上了HTTPS，好在安全，好在好看，别小瞧这好看，你若不上HTTPS有的浏览器就直接标注你为不安全网站，这个严重了，你虽然知道自己人畜无害的但用户一看见那红色的叉叉就不放心了，当然作为一个程序员来讲这么说又显得肤浅了，实质上我们通常传输一些重要信息都会进行加密比如MD5编码，来防止用户敏感信息这类的被人拦截获取了，但是互联网所传输的敏感信息远不只是这点，例如搜索内容，HTTP是全裸式的明文请求，域名、路径和参数都被中间人们看得一清二楚，另外HTTP还有篡改风险和冒充风险，所以我们需要HTTPS，现在你可能会有两个疑问(没有我也要说，呵呵。。)，<br>1，HTTPS这么好为什么不都上HTTPS。2，HTTPS，如何做到的这么安全</p>
-<p><1>：HTTPS好在安全，但是安全有安全的代价，那就是速度会降低，HTTPS会让页面加载时间增加了50%，增加10%到20%的耗电，此外，HTTPS还会影响缓存，增加数据开销和功耗，已有安全措施也会受到影响。</1></p>
-<p><2>：HTTPS所做的基本是两部，首先验证证书，然后非对称加密。<br>①客户端的浏览器向服务器传送客户端SSL 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种信息。<br>②服务器向客户端传送SSL 协议的版本号，加密算法的种类，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。<br>③客户利用服务器传过来的信息验证服务器的合法性，服务器的合法性包括：证书是否过期，发行服务器证书的CA 是否可靠，发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，服务器证书上的域名是否和服务器的实际域名相匹配。如果合法性验证没有通过，通讯将断开；如果合法性验证通过，将继续进行第四步。<br>④用户端随机产生一个用于后面通讯的“对称密码”，然后用服务器的公钥（服务器的公钥从步骤②中的服务器的证书中获得）对其加密，然后将加密后的“预主密码”传给服务器。<br>⑤如果服务器要求客户的身份认证（在握手过程中为可选），用户可以建立一个随机数然后对其进行数据签名，将这个含有签名的随机数和客户自己的证书以及加密过的“预主密码”一起传给服务器。<br>⑥如果服务器要求客户的身份认证，服务器必须检验客户证书和签名随机数的合法性，具体的合法性验证过程包括：客户的证书使用日期是否有效，为客户提供证书的CA 是否可靠，发行CA 的公钥能否正确解开客户证书的发行CA 的数字签名，检查客户的证书是否在证书废止列表（CRL）中。检验如果没有通过，通讯立刻中断；如果验证通过，服务器将用自己的私钥解开加密的“预主密码”，然后执行一系列步骤来产生主通讯密码（客户端也将通过同样的方法产生相同的主通讯密码）。<br>⑦服务器和客户端用相同的主密码即“通话密码”，一个对称密钥用于SSL 协议的安全数据通讯的加解密通讯。同时在SSL 通讯过程中还要完成数据通讯的完整性，防止数据通讯中的任何变化。<br>⑧客户端向服务器端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知服务器客户端的握手过程结束。<br>⑨服务器向客户端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知客户端服务器端的握手过程结束。<br>⑩SSL 的握手部分结束，SSL 安全通道的数据通讯开始，客户和服务器开始使用相同的对称密钥进行数据通讯，同时进行通讯完整性的检验。<br>HTTPS完整通讯过程就是这些，在下一篇中我会介绍下非对称加密，这个伟大的加密算法。</2></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/01/07/HTTP与HTTPS差在哪/"  title="HTTP与HTTPS差在哪">
+ <strong>下一篇：</strong><br/> 
+ <span>HTTP与HTTPS差在哪
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
@@ -368,6 +345,11 @@ $(document).ready(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
   
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
   $(window).resize(function(){
     getSize(); 
     if (myWidth >= 1024) {
@@ -376,12 +358,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -421,4 +480,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
